@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Giới thiệu bản thân - Cute Phô Mai Que 💖</title>
+    <link rel="stylesheet" href="GTBT.css" />
+  </head>
+  <body>
+    <div
+      class="bubble"
+      style="
+        width: 60px;
+        height: 60px;
+        top: 20%;
+        left: 10%;
+        animation-delay: 0s;
+      "
+    ></div>
+    <div
+      class="bubble"
+      style="
+        width: 100px;
+        height: 100px;
+        top: 70%;
+        left: 80%;
+        animation-delay: 3s;
+      "
+    ></div>
+    <div
+      class="bubble"
+      style="
+        width: 80px;
+        height: 80px;
+        top: 50%;
+        left: 40%;
+        animation-delay: 5s;
+      "
+    ></div>
+    <div
+      class="bubble"
+      style="
+        width: 50px;
+        height: 50px;
+        top: 10%;
+        left: 70%;
+        animation-delay: 1s;
+      "
+    ></div>
+
+<div class="profile">
+    <div class="avatar">
+        <img src="https://scontent.fsgn2-11.fna.fbcdn.net/v/t39.30808-1/601871151_122205756134355103_1811413859577141702_n.jpg?stp=dst-jpg_s160x160_tt6&_nc_cat=105&_nc_cb=99be929b-ad57045b&ccb=1-7&_nc_sid=e99d92&_nc_ohc=ZlsclGntmgsQ7kNvwGZBCr4&_nc_oc=AdkRKJRxGGAphJscOL6BRAFL4IbFh8gY8c07PIZtSpM991_suVJcLGs38HxW32DKW8Tqpt7WA1MrQuVwKqCASAde&_nc_zt=24&_nc_ht=scontent.fsgn2-11.fna&_nc_gid=PcT2MxfIC-lkwMvTQazOiA&oh=00_AfmRBWTaA6YQd7Xdv0i3zkiHRVXjzG_cyzaAQx5Grpu1IQ&oe=6957FC95" alt="Avatar">
+    </div>
+    <h1>Nguyễn Đăng Cao</h1>
+</div>
+    <div class="info">
+      <h2>Giới thiệu</h2>
+      <p>
+        Chào bạn! Mình là Đăng Cao – người thích sáng tạo, đáng yêu và đam mê
+        công nghệ 💕 Mình cực kỳ mê code 💻✨, ăn đồ ngọt và đi dạo cùng bạn bè
+        dưới hoàng hôn 🍰🌈 Cuộc sống với mình đơn giản là: “Cười thật tươi,
+        sống thật vui và lan toả năng lượng tích cực!”
+        
+      </p>
+    </div>
+
+    <div class="circles">
+      <div class="circle" onclick="showPopup('info')">📋 Thông tin</div>
+      <div class="circle" onclick="showPopup('hobby')">🎨 Sở thích</div>
+      <div class="circle" onclick="showPopup('skill')">💻 Kỹ năng</div>
+      <div class="circle" onclick="showPopup('goal')">🚀 Mục tiêu</div>
+    </div>
+
+    <div class="popup" id="popup">
+      <div class="popup-content">
+        <span class="close-btn" onclick="closePopup()">×</span>
+        <h2 id="popup-title"></h2>
+        <p id="popup-text"></p>
+      </div>
+    </div>
+
+    <footer>© 2025 Nguyễn Đăng Cao – Vip Pro 💖</footer>
+
+    <script>
+      function showPopup(type) {
+        const popup = document.getElementById("popup");
+        const title = document.getElementById("popup-title");
+        const text = document.getElementById("popup-text");
+
+        if (type === "info") {
+          title.innerText = "📋 Thông tin";
+          text.innerText =
+            "Mình là Nguyễn Đăng Cao, sinh năm 2007, đến từ Quảng Bình – nơi được mệnh danh là Vương quốc hang động của Việt Nam. Hiện đang học và làm trong lĩnh vực công nghệ thông tin.";
+        } else if (type === "hobby") {
+          title.innerText = "🎨 Sở thích";
+          text.innerText =
+            "Mình cực kỳ mê code 💻✨, ngoài ra mình còn thích chơi thể thao và đặc biệt là mê bánh ngọt 🍰 và cà phê ☕.";
+        } else if (type === "skill") {
+          title.innerText = "💻 Kỹ năng";
+          text.innerText =
+            "Thành thạo HTML, CSS, JavaScript cơ bản; biết sử dụng Photoshop và Figma để thiết kế giao diện đẹp mắt 💖 ngoài ra mình còn biết cả Java, SQL...";
+        } else if (type === "goal") {
+          title.innerText = "🚀 Mục tiêu";
+          text.innerText =
+            "Trong tương lai, mình muốn trở thành một Frontend Developer sáng tạo, mang lại trải nghiệm web đáng yêu và thân thiện cho mọi người!";
+        }
+
+        popup.style.display = "flex";
+      }
+
+      function closePopup() {
+        document.getElementById("popup").style.display = "none";
+      }
+    </script>
+  </body>
+</html>
